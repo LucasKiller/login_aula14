@@ -6,6 +6,7 @@ import java.sql.Connection;
 import javax.swing.*;
 
 import entities.User;
+import screens.Main;
 
 public class LoginEvents implements ActionListener{
 
@@ -40,7 +41,8 @@ public class LoginEvents implements ActionListener{
                 
             } else {
                 JOptionPane.showMessageDialog(loginScreen, "Usuário logado!", "Sucesso!", JOptionPane.INFORMATION_MESSAGE);
-
+                new Main(conn);
+                loginScreen.dispose();
             }
 
         }
