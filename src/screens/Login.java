@@ -60,11 +60,9 @@ public class Login extends JFrame {
 
         title_label = new JLabel("LOGIN");
         title_label.setFont(title_font);
-        title_label.setForeground(Color.WHITE);
 
         login_label = new JLabel("Usuário: ");
         login_label.setFont(notTitle_font);
-        login_label.setForeground(Color.WHITE);
 
         login_field = new JTextField();
         login_field.setPreferredSize(textField_dimension);
@@ -72,7 +70,6 @@ public class Login extends JFrame {
 
         pass_label = new JLabel("Senha: ");
         pass_label.setFont(notTitle_font);
-        pass_label.setForeground(Color.WHITE);
 
         pass_field = new JPasswordField();
         pass_field.setPreferredSize(textField_dimension);
@@ -110,7 +107,6 @@ public class Login extends JFrame {
 
     private void prepareScreen() {
 
-        Color backgroundColor = new Color(237, 151, 71);
 
         contentPane = this.getContentPane();
         contentPane.setLayout(new BorderLayout());
@@ -133,12 +129,6 @@ public class Login extends JFrame {
         contentPane.add(northPanel, BorderLayout.NORTH);
         contentPane.add(centralPanelDiv, BorderLayout.CENTER);
         contentPane.add(southPanelDiv, BorderLayout.SOUTH);
-
-        northPanel.setBackground(backgroundColor);
-        centralPanelDiv.setBackground(backgroundColor);
-        centralPanelGrid.setBackground(backgroundColor);
-        southPanelDiv.setBackground(backgroundColor);
-        southPanelGrid.setBackground(backgroundColor);
     }
 
 }
