@@ -2,15 +2,11 @@ package events;
 
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
-import java.sql.Connection;
-import java.sql.Timestamp;
+import java.sql.*;
 import java.time.LocalDateTime;
 
-import entities.Aluno;
-import entities.Bimester;
-import entities.Subject;
+import entities.*;
 import screens.Main;
 import utils.FetchTableData;
 import utils.MapCurrentTable;
@@ -30,9 +26,6 @@ public class MainEvents implements ActionListener{
     private JButton ler;
     private JButton salvar;
 
-    private JTable table;
-    private JPanel tableBackground;
-
     private Aluno aluno;
 
     private Connection conn;
@@ -40,9 +33,7 @@ public class MainEvents implements ActionListener{
     public MainEvents(JButton ler, JButton salvar, JTable table, Aluno aluno, JPanel tableBackground, Main mainScreen, Connection conn) {
         this.ler = ler;
         this.salvar = salvar;
-        this.table = table;
         this.aluno = aluno;
-        this.tableBackground = tableBackground;
         this.mainScreen = mainScreen;
         this.conn = conn;
     }

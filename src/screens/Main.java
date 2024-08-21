@@ -1,20 +1,16 @@
 package screens;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 
 import entities.Aluno;
-import entities.Subject;
 import events.MainEvents;
 import utils.FetchTableData;
 
 import java.awt.*;
-import java.awt.event.*;
 import java.sql.Connection;
 
 public class Main extends JFrame{
     
-    private Container contentPane;
     private JPanel northPanel;
     private JPanel southPanel;
 

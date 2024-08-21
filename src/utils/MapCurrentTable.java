@@ -3,7 +3,6 @@ package utils;
 import java.util.ArrayList;
 
 import javax.swing.JTable;
-import javax.swing.table.*;
 
 public class MapCurrentTable {
     
