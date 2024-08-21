@@ -42,10 +42,10 @@ public class Login extends JFrame {
 
     private void initializeScreen() {
         // setSize(300, 200);
-        setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
         pack();
+        setLocationRelativeTo(null);
         setVisible(true);
     }
 

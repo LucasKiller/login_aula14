@@ -5,13 +5,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class User {
+public class Aluno {
 
     private int _id;
     private String _name;
     private String _pass;
 
-    public User(String name, String pass) {
+    public Aluno(String name, String pass) {
         this._name = name;
         this._pass = pass;
     }
@@ -42,7 +42,7 @@ public class User {
 
     public void inserir(Connection conn) {
 
-        String sqlInsert = "INSERT INTO users(id, name, password) values (null, ?, ?)";
+        String sqlInsert = "INSERT INTO alunos(id_aluno, nome, senha) values (null, ?, ?)";
 
         try(PreparedStatement stm = conn.prepareStatement(sqlInsert);) {
             stm.setString(1, this.get_name());
@@ -60,7 +60,7 @@ public class User {
     }
 
     public void carregar(Connection conn) {
-        String sqlLoad = "SELECT * FROM users WHERE name = ? AND password = ?";
+        String sqlLoad = "SELECT * FROM alunos WHERE nome = ? AND senha = ?";
 
         try (PreparedStatement stm = conn.prepareStatement(sqlLoad);) {
             stm.setString(1, this.get_name());
